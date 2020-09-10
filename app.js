@@ -23,5 +23,5 @@ function update() {
   let totalTime = schedule.getTotalTime();
   let timeLeft = totalTime - schedule.getTimePassedUntil(new Date());
   let percentage = timeLeft / totalTime * 100;
-  progressBar.style.setProperty("height", `${percentage}%`);
+  progressBar.style.setProperty("height", `${100 - percentage}%`);
 }
