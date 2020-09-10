@@ -10,19 +10,20 @@
     justify-content: space-around;
     align-items: center;
     height: 100vh;
+    padding: 0 5%;
     background: #073042;
 }
 
 header h1 {
     font-weight: 700;
-    font-size: 4rem;
+    font-size: 4.5rem;
     color: rgb(255, 255, 255);
 }
 
 header h2 {
     font-size: 2.2rem;
-    margin-top: 1rem;
-    color: rgba(255, 255, 255, 0.7);
+    margin-top: 1.5rem;
+    color: rgba(255, 255, 255, 0.8);
 
     height: 4rem;
 }
@@ -45,11 +46,13 @@ header h2::after {
 }
 
 figure {
-    width: 200px;
+    width: 12rem;
     height: 70vh;
-    border-radius: .5rem;
+    border-radius: .8rem;
     
-    background: rgb(255, 255, 255);
+    background: #031b25;
+    box-shadow: 0 .4rem 2rem rgba(0, 0, 0, 0.3);
+
     display: flex;
     align-items: flex-end;
     position: relative;
@@ -67,19 +70,27 @@ figure > div {
     transition: height 2s ease;
 }
 
-figure>div div {
-    flex: 1;
-    width: 100%;
-}
-
 figure>div div:last-child {
-    background-color: #F96734;
-    flex: unset;
-    min-height: 8em;
+    background: repeating-linear-gradient(135deg,#F96734,#F96734 1.8rem,#031b25 1.3rem,#031b25 2.6rem);
+    min-height: 8rem;
 }
 
 @media screen and (max-width: 800px) {
     #wrap {
         flex-direction: column;
+        justify-content: flex-start;
+        padding: 3rem 0;
+    }
+    header h1 {
+        font-size: 2rem;
+    }
+    header h2 {
+        font-size: 1.2rem;
+    }
+    figure {
+        width: 1rem;
+        height: 70vw;
+        transform: rotate(90deg);
+        box-shadow: none;
     }
 }
