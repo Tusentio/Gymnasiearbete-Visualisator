@@ -1,0 +1,22 @@
+{
+  "frånOchMed": "2020-W35-1",
+  "tillOchMed": "2020-W49-7",
+  "tillfällen": [
+    {
+      "veckodag": "tisdag",
+      "starttid": "12:15",
+      "sluttid": "14:10"
+    },
+    {
+      "veckodag": "onsdag",
+      "starttid": "12:20",
+      "sluttid": "16:00"
+    }
+  ],
+  "exkludera": [
+    "2020-W42-3",
+    "2020-W43-2",
+    "2020-W44-2",
+    "2020-W44-3"
+  ]
+}
