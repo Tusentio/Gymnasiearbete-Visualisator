@@ -13,7 +13,7 @@ function init() {
     return;
   }
 
-  progressBar = document.getElementById("progress-bar");
+  progressBar = document.getElementById("empty-space");
 
   update();
   setInterval(update, MILLIS_MINUTE);
@@ -21,7 +21,7 @@ function init() {
 
 function update() {
   let totalTime = schedule.getTotalTime();
-  let timeLeft = totalTime - schedule.getTimePassedUntil(new Date());
-  let percentage = timeLeft / totalTime * 100;
-  progressBar.style.setProperty("height", `${100 - percentage}%`);
+  let timePassed = schedule.getTimePassedUntil(new Date());
+  let percentage = timePassed / totalTime * 100;
+  progressBar.style.setProperty("height", `${percentage}%`);
 }
