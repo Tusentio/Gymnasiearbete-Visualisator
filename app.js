@@ -18,7 +18,7 @@ function init() {
   timeLeftHeading = document.getElementById("time-left");
 
   update();
-  setInterval(update, MILLIS_MINUTE);
+  setInterval(update, 1000);
 }
 
 function update() {
