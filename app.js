@@ -17,8 +17,30 @@ function init() {
   progressBar = document.getElementById("empty-space");
   timeLeftHeading = document.getElementById("time-left");
 
+  generateTimeMarks();
+
   update();
   setInterval(update, 1000);
+}
+
+function generateTimeMarks() {
+  let timeMarksList = document.getElementById("time-marks-list");
+
+  let totalTime = schedule.getTotalTime();
+  let renderedOccasions = schedule.renderOccasions();
+
+  renderedOccasions.map(e => e.end - e.start).reduce((offset, duration) => {
+    if (offset > 0) {
+      let mark = document.createElement("li");
+
+      let percentageFromTop = offset / totalTime * 100;
+      mark.style.setProperty("top", `${percentageFromTop}%`);
+
+      timeMarksList.appendChild(mark);
+    }
+
+    return offset + duration;
+  }, 0);
 }
 
 function update() {
