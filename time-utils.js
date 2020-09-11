@@ -68,3 +68,10 @@ function getWeekYearStart(year) {
     return yearStartDate.getTime() + (7 - yearStartDay) * MILLIS_DAY;
   }
 }
+
+function durationToHMSString(duration) {
+  let hours = Math.floor(duration / MILLIS_MINUTE / 60);
+  let minutes = Math.floor(duration / MILLIS_MINUTE) % 60;
+  let seconds = Math.floor(duration / MILLIS_MINUTE * 60) % 60;
+  return `${hours}h ${minutes}m ${seconds}s`;
+}

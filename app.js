@@ -1,5 +1,6 @@
 let schedule;
 let progressBar;
+let timeLeftHeading;
 
 function init() {
   if (!schedule) {
@@ -14,6 +15,7 @@ function init() {
   }
 
   progressBar = document.getElementById("empty-space");
+  timeLeftHeading = document.getElementById("time-left");
 
   update();
   setInterval(update, MILLIS_MINUTE);
@@ -24,4 +26,7 @@ function update() {
   let timePassed = schedule.getTimePassedUntil(new Date());
   let percentage = timePassed / totalTime * 100;
   progressBar.style.setProperty("height", `${percentage}%`);
+
+  let timeLeft = totalTime - timePassed;
+  timeLeftHeading.textContent = durationToHMSString(timeLeft);
 }
