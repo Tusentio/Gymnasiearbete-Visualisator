@@ -29,18 +29,16 @@ function generateTimeMarks() {
   let totalTime = schedule.getTotalTime();
   let renderedOccasions = schedule.renderOccasions();
 
-  renderedOccasions.map(e => e.end - e.start).reduce((offset, duration) => {
-    if (offset > 0) {
-      let mark = document.createElement("li");
+  renderedOccasions.pop();
+  renderedOccasions.forEach(occation => {
+    let mark = document.createElement("li");
 
-      let percentageFromTop = offset / totalTime * 100;
-      mark.style.setProperty("top", `${percentageFromTop}%`);
+    let duration = occation.end - occation.start;
+    let durationPercentage = duration / totalTime * 100;
+    mark.style.setProperty("height", `${durationPercentage}%`);
 
-      timeMarksList.appendChild(mark);
-    }
-
-    return offset + duration;
-  }, 0);
+    timeMarksList.appendChild(mark);
+  });
 }
 
 function update() {
