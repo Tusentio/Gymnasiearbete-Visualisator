@@ -11,7 +11,7 @@
     align-items: center;
     height: 100vh;
     padding: 0 5%;
-    background: #02404d;
+    background: #05435c;
 }
 
 header h1 {
@@ -37,8 +37,8 @@ header h2 strong {
     height: 70vh;
     border-radius: .8rem;
 
-    box-shadow: inset 0 .4rem 2rem rgba(0, 0, 0, 0.4);
-    background: linear-gradient(90deg, #dd1255, #ac0460);
+    box-shadow: inset 0 0 2rem rgba(0, 0, 0, 0.4);
+    background: linear-gradient(90deg, #dd1267, #eb6284 30%, #dd1267, #ac0474);
 
     display: flex;
     align-items: flex-end;
@@ -66,7 +66,7 @@ header h2 strong {
     bottom: 0;
     width: 100%;
     height: 2px;
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0.8) 0, rgba(255, 255, 255, 0.4) 20%, transparent 100%);
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8) 40%, transparent 90%);
 }
 
 .progress-bar #empty-space {
@@ -80,8 +80,8 @@ header h2 strong {
 }
 
 .progress-bar #warning {
-    background: repeating-linear-gradient(45deg, #ddc806, #ddc806 1rem, transparent 1rem, transparent 2rem);
-    height: 20%;
+    background: repeating-linear-gradient(135deg, #e7d20f, #e7d20f 1rem, transparent 1rem, transparent 2rem);
+    height: 15%;
     width: 100%;
 }
 
