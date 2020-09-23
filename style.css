@@ -5,7 +5,8 @@
     font-weight: 400;
 }
 
-html, body {
+html,
+body {
     width: 100%;
     height: 100%;
 }
@@ -45,7 +46,7 @@ header h2 strong {
 .progress-bar {
     width: 12rem;
     height: 70vh;
-    border-radius: .8rem;
+    border-radius: 0.8rem;
 
     box-shadow: inset 0 0 2rem rgba(0, 0, 0, 0.4);
     background: linear-gradient(90deg, #dd1267, #eb6284 30%, #dd1267, #ac0474);
@@ -65,22 +66,27 @@ header h2 strong {
     height: 100%;
 }
 
-.progress-bar #time-marks-list>li {
+.progress-bar #time-marks-list > li {
     position: relative;
     width: 100%;
 }
 
-.progress-bar #time-marks-list>li::after {
+.progress-bar #time-marks-list > li::after {
     content: "";
     position: absolute;
     bottom: 0;
     width: 100%;
     height: 2px;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8) 40%, transparent 90%);
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.8) 40%,
+        transparent 90%
+    );
 }
 
 .progress-bar #empty-space {
-    box-shadow: inset 0 .4rem 2rem rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0 0.4rem 2rem rgba(0, 0, 0, 0.5);
     background: #c9edff;
     width: 100%;
     height: 0%;
@@ -90,7 +96,13 @@ header h2 strong {
 }
 
 .progress-bar #warning {
-    background: repeating-linear-gradient(135deg, #e7d20f, #e7d20f 1rem, transparent 1rem, transparent 2rem);
+    background: repeating-linear-gradient(
+        135deg,
+        #e7d20f,
+        #e7d20f 1rem,
+        transparent 1rem,
+        transparent 2rem
+    );
     height: 15%;
     width: 100%;
 }
@@ -124,6 +136,12 @@ header h2 strong {
     }
 
     .progress-bar #warning {
-        background: repeating-linear-gradient(45deg, #ddc806, #ddc806 0.5rem, transparent 0.5rem, transparent 1rem);
+        background: repeating-linear-gradient(
+            45deg,
+            #ddc806,
+            #ddc806 0.5rem,
+            transparent 0.5rem,
+            transparent 1rem
+        );
     }
 }
