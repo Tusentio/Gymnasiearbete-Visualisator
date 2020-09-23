@@ -48,7 +48,9 @@ class Schedule {
                 midnight += MILLIS_WEEK
             ) {
                 if (
-                    this.exclusions.find((e) => e.getDate().getTime() == midnight) || // Kolla om datumet är exkluderat
+                    this.exclusions.find(
+                        (e) => e.getDate().getTime() == midnight
+                    ) || // Kolla om datumet är exkluderat
                     midnight < this.fromInclusive.getDate().getTime() // eller om datumet är innan "frånOchMed"
                 )
                     continue; // i sådana fall, rendera inte det här tillfället
@@ -79,7 +81,10 @@ class Schedule {
         let toInclusive = date.getTime();
         if (removeTimezoneOffset)
             toInclusive -= date.getTimezoneOffset() * MILLIS_MINUTE;
-        toInclusive = Math.min(toInclusive, this.toInclusive.getDate().getTime()); // Begränsa sluttiden till det inklusiva maximat ("tillOchMed")
+        toInclusive = Math.min(
+            toInclusive,
+            this.toInclusive.getDate().getTime()
+        ); // Begränsa sluttiden till det inklusiva maximat ("tillOchMed")
 
         // Beräkna tiden av 00:00 på den senaste föregående måndagen till datumet i "frånOchMed"
         let firstWeekStart =
