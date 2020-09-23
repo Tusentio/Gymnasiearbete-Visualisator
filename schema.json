@@ -13,6 +13,17 @@
             "sluttid": "15:45"
         }
     ],
-    "inkludera": [],
+    "inkludera": [
+        {
+            "datum": "2020-W42-1",
+            "starttid": "9:00",
+            "sluttid": "15:00"
+        },
+        {
+            "datum": "2020-W42-3",
+            "starttid": "9:00",
+            "sluttid": "15:00"
+        }
+    ],
     "exkludera": ["2020-W42-3", "2020-W43-2", "2020-W44-2", "2020-W44-3"]
 }
